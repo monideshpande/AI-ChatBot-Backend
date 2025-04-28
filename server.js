@@ -88,6 +88,10 @@ io.on('connection', (socket) => {
 // Routes
 app.use("/api/auth", APIRoutes);
 
+app.get("/", (req, res) => {
+  res.send("yeah ! Backend is working");
+});
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
